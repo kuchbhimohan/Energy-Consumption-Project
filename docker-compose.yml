@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  energy-analysis:
+    build: .
+    ports:
+      - "8888:8888"  # Jupyter Lab
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONPATH=/app
